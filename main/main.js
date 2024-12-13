@@ -1,9 +1,11 @@
 const submitBotton = document.querySelector('#submit');
 let numberKmInput = document.querySelector('#numberKm');
 let agePersonInput = document.querySelector('#agePerson');
+let resultInput = document.querySelector('#result')
 
 const priceKm = 0.21;
 
+// tutte le azioni che devono succedere quando premo il bottone
 submitBotton.addEventListener('click', function(event){
     event.preventDefault()
 
@@ -14,7 +16,7 @@ submitBotton.addEventListener('click', function(event){
     //verfico che entrambi siano numeri quelli inseriti
     if(isNaN(numberKm) || isNaN (agePerson) || numberKm <= 0 || agePerson <= 0){
 
-        console.log('Entrabe le richieste devono avere un valore numerico e superiore a 0, grazie');
+        resultInput.innerHTML = `Entrabe le richieste devono avere un valore numerico e superiore a 0, grazie`;
 
     }else{
 
@@ -28,7 +30,7 @@ submitBotton.addEventListener('click', function(event){
 
             
             //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto Min 18
-            console.log(`€${priceFinal.toFixed(2).replace(".",",")}`);
+            resultInput.innerHTML = `€${priceFinal.toFixed(2).replace(".",",")}`;
 
 
         //controllo che l'età sia >= di 65 + calcolo
@@ -36,12 +38,12 @@ submitBotton.addEventListener('click', function(event){
             priceFinal = priceFinal - (priceTot * 40)/100;
 
             //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto 0ver 65
-            console.log(`€${priceFinal.toFixed(2).replace(".",",")}`);
+           resultInput.innerHTML = `€${priceFinal.toFixed(2).replace(".",",")}`;
 
         }else{
             
             //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola
-            console.log(`€${priceFinal.toFixed(2).replace(".",",")}`);
+            resultInput.innerHTML = `€${priceFinal.toFixed(2).replace(".",",")}`;
         }
     }
 
