@@ -10,7 +10,7 @@ submitBotton.addEventListener('click', function(event){
     event.preventDefault()
 
     //rendiamo numeri i valori inseriti
-    const numberKm = parseFloat(numberKmInput.value)
+    const numberKm = parseInt(numberKmInput.value)
     const agePerson = parseInt(agePersonInput.value)
 
     //verfico che entrambi siano numeri quelli inseriti
@@ -25,10 +25,9 @@ submitBotton.addEventListener('click', function(event){
         let priceFinal = priceTot;
 
         //controllo che l'età sia <= 18 + calcolo
-        if(agePerson <= 18){
+        if(agePerson <= 17){
             priceFinal = priceFinal - ((priceTot * 20)/100);
-
-            
+  
             //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto Min 18
             resultInput.innerHTML = `€${priceFinal.toFixed(2).replace(".",",")}`;
 
