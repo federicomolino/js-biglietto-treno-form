@@ -12,7 +12,7 @@ submitBotton.addEventListener('click', function(event){
     const agePerson = parseInt(agePersonInput.value)
 
     //verfico che entrambi siano numeri quelli inseriti
-    if(isNaN(numberKm) || isNaN (agePerson) && (numberKm) >= 0 || Number(agePerson) >= 0){
+    if(isNaN(numberKm) || isNaN (agePerson) || numberKm <= 0 || agePerson <= 0){
 
         console.log('Entrabe le richieste devono avere un valore numerico e superiore a 0, grazie');
 
