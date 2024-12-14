@@ -5,6 +5,7 @@ let resultInput = document.querySelector('#result')
 const spinnerButton = submitBotton.querySelector ('#spinnerButton');
 const statusSpan = submitBotton.querySelector ('#statusButton');
 
+
 const priceKm = 0.21;
 
 // tutte le azioni che devono succedere quando premo il bottone
@@ -13,6 +14,8 @@ submitBotton.addEventListener('click', function(event){
 
     //faccio apparire al click lo spinner del bottone
     spinnerButton.classList.toggle('d-none')
+
+    const statusSpanOriginale = statusSpan;
     statusSpan.innerHTML =  `Sto calcolando`;
 
     //la rispsota viene data dopo 1,5 secondi
@@ -58,7 +61,7 @@ submitBotton.addEventListener('click', function(event){
 
         //tolgo la rotella
         spinnerButton.classList.toggle('d-none')
-        statusSpan.innerHTML = `Risultato`;
+        statusSpan.innerHTML = `CALCOLA`;
 
     }, 1500);
 })
