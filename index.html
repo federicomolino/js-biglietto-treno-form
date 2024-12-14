@@ -23,7 +23,10 @@
                 <div class="form-text">Se hai un età compresa o superiore i 65 anni sarà applicato uno sconto del 40%</div>
             </div>
 
-            <button id="submit" class="btn btn-primary mt-3">CALCOLA</button>
+            <button id="submit" class="btn btn-primary mt-3">
+                <span id="spinnerButton" class="d-none spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span id="statusButton" role="status">CALCOLA</span>              
+            </button>
 
             <p id="result" class="mt-5">Costo totale:</p>
         </form>
