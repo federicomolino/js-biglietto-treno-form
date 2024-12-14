@@ -1,3 +1,13 @@
+body{
+    background-color: beige;
+}
+
+.title{
+    text-align: center;
+    margin-top: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .text-red{
     color: red;
     font-weight: bold;

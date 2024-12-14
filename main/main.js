@@ -2,7 +2,6 @@ const submitBotton = document.querySelector('#submit');
 let numberKmInput = document.querySelector('#numberKm');
 let agePersonInput = document.querySelector('#agePerson');
 let resultInput = document.querySelector('#result')
-
 const spinnerButton = submitBotton.querySelector ('#spinnerButton');
 const statusSpan = submitBotton.querySelector ('#statusButton');
 
@@ -14,7 +13,6 @@ submitBotton.addEventListener('click', function(event){
 
     //faccio apparire al click lo spinner del bottone
     spinnerButton.classList.toggle('d-none')
-
     statusSpan.innerHTML =  `Sto calcolando`;
 
     //la rispsota viene data dopo 1,5 secondi
@@ -27,7 +25,7 @@ submitBotton.addEventListener('click', function(event){
         //verfico che entrambi siano numeri quelli inseriti
         if(isNaN(numberKm) || isNaN (agePerson) || numberKm <= 0 || agePerson <= 0){
 
-            resultInput.innerHTML = `Entrabe le richieste devono avere un valore numerico superiore a 0, ricarica la pagina`;
+            resultInput.innerHTML = `Entrabe le richieste devono avere un valore numerico superiore a 0, ricarica la pagina!!!`;
             resultInput.classList.add('text-red')
 
         }else{

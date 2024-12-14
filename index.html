@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1 class="title">Biglietto Treno</h1>
+
     <div class="container mt-5">
         <form>
             <div class="mb-3">
@@ -18,11 +21,11 @@
 
             <div class="mb-3">
                 <label class="form-label">Insersic la tua età</label>
-                <input type="age" class="form-control" id="agePerson">
+                <input type="number" class="form-control" id="agePerson">
                 <div class="form-text">Se hai un età compresa tra 1 e 17 anni sarà applicato uno sconto del 20%</div>
-                <div class="form-text">Se hai un età compresa o superiore i 65 anni sarà applicato uno sconto del 40%</div>
+                <div class="form-text">Se hai un età superiore o uguale i 65 anni sarà applicato uno sconto del 40%</div>
             </div>
-
+            
             <button id="submit" class="btn btn-primary mt-3">
                 <span id="spinnerButton" class="d-none spinner-border spinner-border-sm" aria-hidden="true"></span>
                 <span id="statusButton" role="status">CALCOLA</span>              
