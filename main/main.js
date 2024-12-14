@@ -4,7 +4,7 @@ let agePersonInput = document.querySelector('#agePerson');
 let resultInput = document.querySelector('#result')
 
 const spinnerButton = submitBotton.querySelector ('#spinnerButton');
-const status = submitBotton.querySelector ('#statusButton');
+const statusSpan = submitBotton.querySelector ('#statusButton');
 
 const priceKm = 0.21;
 
@@ -15,6 +15,7 @@ submitBotton.addEventListener('click', function(event){
     //faccio apparire al click lo spinner del bottone
     spinnerButton.classList.toggle('d-none')
 
+    statusSpan.innerHTML =  `Sto calcolando`;
 
     //la rispsota viene data dopo 1,5 secondi
     setTimeout(() => {
@@ -59,6 +60,7 @@ submitBotton.addEventListener('click', function(event){
 
         //tolgo la rotella
         spinnerButton.classList.toggle('d-none')
+        statusSpan.innerHTML = `Risultato`;
 
     }, 1500);
 })
